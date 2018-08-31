@@ -1,0 +1,19 @@
+<nav>
+  <ul>
+    <li>
+      <a routerLink="" [class.activated]="currentUrl == '/'">
+        <i class="material-icons">supervised_user_circle</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="posts" [class.activated]="currentUrl == '/posts'">
+        <i class="material-icons">message</i>
+      </a>
+    </li>
+    <li>
+        <a routerLink="todos" [class.activated]="currentUrl == '/todos'">
+          <i class="material-icons">check_circle_outline</i>
+        </a>
+      </li>
+  </ul>
+</nav>
