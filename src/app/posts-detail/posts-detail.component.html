@@ -1,2 +1,12 @@
-<h1>{{ post$.title }}</h1>
-<strong>Post:</strong><p>{{ post$.body }}</p>
+<div [@flyInOut]> 
+    <h1>{{ post$.title }}</h1>
+    <strong>Post:</strong><p>{{ post$.body }}</p>
+    <h1>Comments:</h1>
+    <ul [@listStagger]="comments$" >
+        <li *ngFor="let comment of comments$">
+            <h4>{{ comment.name }}</h4>
+            <p>{{ comment.body }}</p>
+            <span>Posted by {{ comment.email }}</span>
+        </li>
+    </ul>
+</div>
